@@ -8,7 +8,7 @@ db.on("error", () => {
 });
 
 db.once("open", () => {
-  console.log("connection is opened");
+  console.log("database connection is opened");
 });
 
 module.exports = mongoose;

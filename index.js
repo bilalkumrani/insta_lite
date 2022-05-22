@@ -29,10 +29,10 @@ app.get("/login", (req, res) => {
   return res.render("login");
 });
 
-app.post("/login", (req, res) => {
-  console.log(req.body);
-  return res.redirect("/");
-});
+// app.post("/login", (req, res) => {
+//   console.log(req.body);
+//   return res.redirect("/");
+// });
 
 app.listen(PORT, (err) => {
   if (err) {
