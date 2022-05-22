@@ -7,12 +7,15 @@
   <body>
     <h1>Sign Up</h1>
 
-    <form action="/register">
-      <input name="name" placeholder="Enter Name" />
-      <input name="email" placeholder="Enter Email" />
-      <input name="username" placeholder="Enter Username" />
-      <input name="password" placeholder="Enter Password" />
-      <button type="submit">Register</button>
-    </form>
+    <div class="form-container">
+      <form action="/register" method="POST">
+        <input name="name" placeholder="Enter Name" required />
+        <input name="email" placeholder="Enter Email" required />
+        <input name="username" placeholder="Enter Username" required />
+        <input name="password" placeholder="Enter Password" required />
+        <input type="file" name="profile-pic" />
+        <button type="submit">Register</button>
+      </form>
+    </div>
   </body>
 </html>

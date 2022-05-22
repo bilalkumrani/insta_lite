@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const { redirect } = require("express/lib/response");
 
 const app = express();
 app.set("view engine", "ejs");
@@ -20,6 +21,11 @@ app.get("/signup", (req, res) => {
 
 app.get("/login", (req, res) => {
   return res.render("login");
+});
+
+app.post("/login", (req, res) => {
+  console.log(req.body);
+  return res.redirect("/");
 });
 
 app.listen(PORT, (err) => {
