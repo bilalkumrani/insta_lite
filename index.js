@@ -3,6 +3,7 @@ const path = require("path");
 const mongoose = require("./config/mongoose");
 const fileUpload = require("express-fileupload");
 const userRouter = require("./routers/userRoute");
+const homeRouter = require("./routers/homeRoute");
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -14,25 +15,9 @@ app.use(fileUpload());
 
 //Router middleware
 app.use(userRouter);
+app.use(homeRouter);
 
 const PORT = 4000;
-
-app.get("/", (req, res) => {
-  return res.render("home");
-});
-
-app.get("/signup", (req, res) => {
-  return res.render("signup");
-});
-
-app.get("/login", (req, res) => {
-  return res.render("login");
-});
-
-// app.post("/login", (req, res) => {
-//   console.log(req.body);
-//   return res.redirect("/");
-// });
 
 app.listen(PORT, (err) => {
   if (err) {
