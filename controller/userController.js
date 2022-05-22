@@ -1,13 +1,12 @@
 const User = require("../models/user");
-const bcrypt = require('bcrypt')
-const path = require('path')
+const bcrypt = require("bcrypt");
+const path = require("path");
 const createUser = async (req, res) => {
-
   console.log("*******inside create user", req.files);
 
-  const img = req.files?.img || { name: 'not image' };
-  if (img.name !== 'not image') {
-    img.mv(path.resolve(__dirname, '../assets/image', img.name));
+  const img = req.files?.img || { name: "not image" };
+  if (img.name !== "not image") {
+    img.mv(path.resolve(__dirname, "../assets/image", img.name));
   }
 
   const { name, email, userName, password } = req.body;
@@ -18,7 +17,9 @@ const createUser = async (req, res) => {
 
   const data = {
     ...req.body,
-    image: req.files?.img.name || path.resolve(__dirname, '../assets/image', 'inta_dp.png'),
+    image:
+      req.files?.img.name ||
+      path.resolve(__dirname, "../assets/image", "inta_dp.png"),
   };
 
   //* Cookie options 
@@ -37,7 +38,6 @@ const createUser = async (req, res) => {
 };
 
 const loginUser = async (req, res) => {
-
   console.log(req.body);
   if (req.user) {
     return res.render("/")
@@ -57,8 +57,11 @@ const loginUser = async (req, res) => {
     res.render('/')
   }
 
-
+}
+const profile = (req, res) => {
+  return res.render("profile");
 };
 
 module.exports.loginUser = loginUser;
 module.exports.createUser = createUser;
+module.exports.profile = profile;

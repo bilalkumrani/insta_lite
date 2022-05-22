@@ -15,7 +15,7 @@ exports.isAuthenticated = async (req, res, next) => {
     console.log(user);
     // req.user = user
     if (user) {
-        return res.render('/')
+        return res.render('home')
     }
 
     next()

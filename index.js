@@ -3,12 +3,13 @@ const path = require("path");
 const mongoose = require("./config/mongoose");
 const fileUpload = require("express-fileupload");
 const userRouter = require("./routers/userRoute");
+const homeRouter = require("./routers/homeRoute");
 const bodyParser = require("body-parser");
 const { isAuthenticated } = require("./middleware/isAuthenticated");
 const cookieParse = require('cookie-parser')
 const cors = require('cors')
 const dotenv = require("dotenv");
-
+const PORT = 4000;
 const app = express();
 
 dotenv.config({ path: "./config/config.env" });
@@ -21,11 +22,12 @@ app.use(cookieParse())
 app.use(fileUpload());
 //Router middleware
 app.use(userRouter);
+
 app.use(cors())
 
 
 
-const PORT = 4000;
+
 
 app.get("/", (req, res) => {
   return res.render("home");
@@ -43,6 +45,9 @@ app.get("/login", isAuthenticated, (req, res) => {
 //   console.log(req.body);
 //   return res.redirect("/");
 // });
+
+
+app.use(homeRouter);
 
 app.listen(PORT, (err) => {
   if (err) {
