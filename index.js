@@ -14,6 +14,14 @@ app.get("/", (req, res) => {
   return res.render("home");
 });
 
+app.get("/signup", (req, res) => {
+  return res.render("signup");
+});
+
+app.get("/login", (req, res) => {
+  return res.render("login");
+});
+
 app.listen(PORT, (err) => {
   if (err) {
     console.log("there is error");
