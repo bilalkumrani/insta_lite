@@ -8,12 +8,12 @@
     <h1>Sign Up</h1>
 
     <div class="form-container">
-      <form action="/register" method="POST">
+      <form action="/register" method="POST" enctype="multipart/form-data">
         <input name="name" placeholder="Enter Name" required />
         <input name="email" placeholder="Enter Email" required />
-        <input name="username" placeholder="Enter Username" required />
+        <input name="userName" placeholder="Enter Username" required />
         <input name="password" placeholder="Enter Password" required />
-        <input type="file" name="profile-pic" />
+        <input type="file" name="img" />
         <button type="submit">Register</button>
       </form>
     </div>
