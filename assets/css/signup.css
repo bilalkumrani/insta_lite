@@ -1,6 +1,14 @@
 body{
-    text-align: center;
-    
+    text-align: center;   
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+
+}
+input{
+    margin: 10px;
 }
 form{
     display: flex;
