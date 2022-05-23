@@ -1,0 +1,88 @@
+/* Header */
+header {
+    background-color: var(--secondry-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 60px;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 5vh;
+}
+
+header input {
+    border: none;
+    background-color: #c2c2c2;
+    border-radius: 5px;
+    height: 2.1rem;
+    width: calc(100% + 2rem);
+    padding: 5px 10px;
+}
+
+header input[type="search"]::-webkit-search-cancel-button {
+
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    display: block;
+    background-image: url('../svg/clear.svg');
+    background-repeat: no-repeat;
+    /* icon size */
+    background-size: 14px;
+
+}
+
+header input:focus {
+    outline: none;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li a:nth-child(1) .action-svg
+{
+    fill:#555555;
+}
+header ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+header ul li a .st0 {
+    fill: none;
+    stroke: #555555;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+header ul li a .st1 {
+    fill: none;
+    stroke: #555555;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+header ul li a .st2 {
+    fill: #555555;
+    stroke: #555555;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+header ul li a:active .action-svg {
+    fill: rgb(0, 0, 0);
+}
+
+header ul li a[tabindex]:focus .action-svg {
+    outline: none;
+    fill: rgb(0, 0, 0);
+}
+
+header ul li a[tabindex]:focus .st0,
+header ul li a[tabindex]:focus .st1,
+header ul li a[tabindex]:focus .st2 {
+    stroke: rgb(0, 0, 0);
+}

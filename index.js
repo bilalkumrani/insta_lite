@@ -41,11 +41,6 @@ app.get("/login", isAuthenticated, (req, res) => {
   return res.render("login");
 });
 
-// app.post("/login", (req, res) => {
-//   console.log(req.body);
-//   return res.redirect("/");
-// });
-
 
 app.use(homeRouter);
 
