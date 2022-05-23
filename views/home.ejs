@@ -7,87 +7,23 @@
 
 <body>
 
-  <%- include('./custom/header.ejs') %>
+  <%- include('./custom/home/header.ejs') %>
+
   <div class="container">
     <div class="main-container">
-      <section>
-        <main>
-          <div class="card" style="margin-bottom: 5vh;">
-            <div class="status">
-              <div class="shape">
-                <img src="image/status.jpg" alt="">
-                <p class="user-name">
-                  ghulam..
-                </p>
-              </div>
+      <main>
+        <!-- post sectoion -->
+        <section>
+          <%- include('./custom/home/stautus.ejs') %> 
+          <%- include('./custom/home/post.ejs') %> 
+        </section>
+      </main>
 
-              <div class="shape">
-                <img src="image/status.jpg" alt="">
-                <p class="user-name">
-                  ghulam..
-                </p>
-              </div>
-          
-            </div>
-          </div>
 
-          
-            <div class="card">
-              <div class="post">
-              <!-- post image -->
-              <div class="header">
-                <div class="left-part">
-                  <div class="avatar">
-                    <img src="image/insta_dp.png" alt="">
-                  </div>
-                  <h6 class="user-name">ghulam.hussain.joyo.official</h6>
-                </div>
-                <div class="right-part"></div>
-              </div>
-              <!-- post image -->
-              <div class="img">
-                <!-- <img src="image/postImage.jpg" alt=""> -->
-              </div>
-              <!-- post description -->
-              <div class="description">
-                <p>follow for more ---- @creative__programmer
-
-                  💖 like 📤 Share 🔖 Save
-
-                  Turn on post notification 🔔
-
-                  feel free to drop your thoughts in the comments below 🙂
-
-                  Dm for any web dev-related queries.
-
-                  Hope you find it helpful ✌️
-
-                  HASHTAGS:
-                  #coderbyte #frontenddeveloper #podcasts #javascript #javascript30 #freecodecamp #webdevelopment
-                  #developerpodcast #googlecode
-                  #codewell #cssbattle #Programming #programminglife
-                  #frontendmentor #programmingthings #programmingproblems #coding #codinglife #codingisfun
-                  #codingproblems #developerspace #supportgoodpost #creativeprogrammer #html #css #javascript</p>
-              </div>
-              <!-- total comment -->
-              <div class="total-comment">
-                <button>View all 24 comments</button>
-              </div>
-              <!-- top two comments -->
-              <div class="top-two-comments">
-
-              </div>
-              <!-- time -->
-              <p class="time">One day ago</p>
-            </div>
-          </div>
-
-        </main>
-      </section>
       <section>
         <div class="user">
           <div class="data">
-            <img src="image/status.jpg" alt="">
+            <img class="avatar" src="image/status.jpg" alt="">
             <div class="info">
               <h6 class="name">
                 vasaltech

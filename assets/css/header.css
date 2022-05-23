@@ -1,5 +1,6 @@
 /* Header */
 header {
+    width: 100%;
     background-color: var(--secondry-color);
     display: flex;
     flex-direction: row;
@@ -7,7 +8,7 @@ header {
     height: 60px;
     align-items: center;
     box-shadow: var(--box-shadow);
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 header input {
