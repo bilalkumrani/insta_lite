@@ -1,5 +1,6 @@
 @import url('./header.css');
 @import url('./main.css');
+@import url('./create-post.css');
 
 :root {
     --primary-color: #FAFAFA;
@@ -7,30 +8,137 @@
     --box-shadow: 0px 1px 2px rgb(207, 207, 207);
     --card-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.23);
     --text-color: black;
+    --text-heading:rgba(var(--i1d,38,38,38),1);
+    --blue-color:#21A2F7;
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    
 }
 
 html,
 body {
     background-color: var(--primary-color);
     width: 100%;
+    -webkit-overflow-scrolling: hide;
+}
+body
+{
+    overflow: hidden;
 }
 
 .avatar
 {
     border-radius: 50%;
 }
+
+
 .container {
-    padding: 0px 30vh;
+    /* padding: 0px 30vh; */
+    display: flex;
+    justify-content: center;
+    
 }
 
 .main-container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 10%;
 }
 
+
+.profile-user
+{
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+ 
+}
+
+.profile-user,
+.suggested-user
+{
+    margin: 20px 0 20px 20px;
+}
+
+.profile-user .data,
+.suggested-user .data,
+.profile-user .data .left,
+.suggested-user .data .left
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-user .data img
+{
+    width: 56px;
+    height: 56px;
+}
+.profile-user .data img,
+.suggested-user .data img
+{
+    margin-right: 10px;
+}
+
+.profile-user .info .name
+{
+    color: #262626;
+    font-weight: 700;
+    opacity: .8;
+    font-size: 1rem;
+}
+
+.profile-user .info .user-name
+{
+    font-size: 0.8rem;
+    color: #6A6A6A;
+    font-weight: 400;;
+}
+.profile-user .data .right,
+.suggested-user .data .right
+{
+    color: #21A2F7;
+    font-weight: 600;
+    font-size: 12px;
+}
+.suggestion-container
+{
+    margin: 10% 0;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.suggestion-container p:nth-child(1)
+{
+    color: #6A6A6A;
+    font-size: 1rem;
+    font-weight: 700;  
+}
+
+.suggestion-container p:nth-child(2)
+{
+    font-size: 0.8rem;
+    /* color: var(--text-color); */
+}
+
+.suggested-user img
+{
+    width: 32px;
+    height: 32px;
+}
+.suggested-user .name
+{
+    color: #262626;
+    font-size: 14px;
+    font-weight: 500;
+}
+.suggested-user .user-name
+{
+    color: #6A6A6A;
+    font-size: 12px; 
+}

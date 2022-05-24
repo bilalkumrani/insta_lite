@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css" />
+    <title>Document</title>
+</head>
+
+<body style="overflow: auto !important;">
+    <%- include('./custom/home/header.ejs') %>
+    <div class="container">
+        <div class="create-post">
+            <div class="title">
+                <p>Create New Post</p>
+            </div>
+            <form id="post-form" action="/post/create" method="post" class="form" enctype="multipart/form-data">
+                <div class="left">
+                    <input name="img" type="file">
+                </div>
+                <div class="right">
+                    <div class="profile">
+                        <img src="image/status.jpg" alt="" class="avatar">
+                        <h4>VasalTech</h4>
+                    </div>
+                    <textarea form="post-form" name="decription" cols="30" rows="10"
+                        placeholder="Write a caption..."></textarea>
+                    <button type="submit">share</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

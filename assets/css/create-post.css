@@ -1,0 +1,87 @@
+.create-post
+{
+    width: 60%;
+    height: 80vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: var(--card-shadow);
+
+}
+.create-post .title
+{
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+    background-color: var(--secondry-color);
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.23);
+    margin-bottom: 1px;
+}
+
+.create-post .form 
+{
+    /* background-color: pink; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100% - 30px);
+}
+.create-post .form .left
+{
+    /* background-color: rgb(192, 13, 43); */
+    border-right: 1px solid rgba(0, 0, 0, 0.23);
+    /* width: 49%; */
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.create-post .form .right
+{
+    flex: 1;
+    /* background-color: rgb(13, 192, 103); */
+    width: 50%;
+    background-color: var(--secondry-color);
+
+    
+}
+.form .right .profile
+{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+   
+}
+
+.form .right .profile img
+{
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+.form .right textarea
+{
+    background-color: transparent;
+    border: none;
+    padding: 0 5%;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.23);
+}
+.form .right textarea:focus
+{
+    outline: none !important;  
+}
+.form .right button
+{
+    border: none;
+    background-color: var(--secondry-color);
+    color: var(--blue-color);
+    font-size: 16px;
+    float: right;
+    margin: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+}

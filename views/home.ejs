@@ -2,6 +2,9 @@
 
 <head>
   <title>Home</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/home.css" />
 </head>
 
@@ -11,29 +14,36 @@
 
   <div class="container">
     <div class="main-container">
-      <main>
-        <!-- post sectoion -->
-        <section>
-          <%- include('./custom/home/stautus.ejs') %> 
-          <%- include('./custom/home/post.ejs') %> 
-        </section>
-      </main>
-
-
       <section>
-        <div class="user">
-          <div class="data">
-            <img class="avatar" src="image/status.jpg" alt="">
-            <div class="info">
-              <h6 class="name">
-                vasaltech
-              </h6>
-              <p class="user-name">
-                Vasal Tech (Software company)
+        <main class="main" id="main" style="overflow-y:auto; height:60%;max-height:786px;">
+          <!-- post sectoion -->
+          <%- include('./custom/home/stautus.ejs') %>
+          <% for(let i=0;i<posts.length;i++){ %>
+          <%- include('./custom/home/post.ejs',{post:posts[i]}) %>
+          <% } %>
+        </main>
+      </section>
 
-              </p>
-            </div>
+      <section style="position: static;">
+        <div class="column">
+          <!-- profile user -->
+          <%- include('./custom/home/profileUser.ejs') %>
+          <!-- suggestion -->
+          <div class="suggestion-container">
+            <p class="suggestion-for-you">
+              Suggestions For You
+            </p>
+            <p>See All</p>
           </div>
+
+          <!-- different users -->
+
+          <%- include('./custom/home/suggestedUser.ejs') %>
+          <%- include('./custom/home/suggestedUser.ejs') %>
+          <%- include('./custom/home/suggestedUser.ejs') %>
+          <%- include('./custom/home/suggestedUser.ejs') %>
+          <%- include('./custom/home/suggestedUser.ejs') %>
+
         </div>
       </section>
 
@@ -42,5 +52,12 @@
 
 
 </body>
+<script>
+  window.onload = () => {
+    console.log("hellow");
+    document.getElementById('main').style.height = window.screen.height * 100;
+    // document.getElementById('main').style.paddingBottom = '1000px';
+  }
+</script>
 
 </html>

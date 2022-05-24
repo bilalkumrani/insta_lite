@@ -1,0 +1,6 @@
+
+
+
+exports.createPost = (req, res) => {
+
+}

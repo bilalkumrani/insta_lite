@@ -26,7 +26,7 @@ const createUser = async (req, res) => {
   const options = {
     expires: new Date(
       //       hours  minutes  seconds   milliseconds
-      Date.now() + 7 * 24 * 60 * 60 * 1000
+      Date.now() + 7 * 24 * 60 * 1000
     ),
     httpOnly: true
   }
@@ -53,7 +53,19 @@ const loginUser = async (req, res) => {
   // console.log(matchPassord);
   res.redirect('back')
   if (matchPassord) {
-    req.id = user._id;
+
+    //* Cookie options 
+    const options = {
+      expires: new Date(
+        //       hours  minutes  seconds   milliseconds
+        Date.now() + 7 * 24 * 60 * 1000
+      ),
+      httpOnly: true
+    }
+
+    const user = await User.create(data);
+    const token = user.getJwtToken()
+    res.cookie('token', token, options)
     res.render('/')
   }
 

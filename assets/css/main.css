@@ -1,6 +1,8 @@
 
-main {
-    /* background-color: red; */
+.main {
+    overflow-y: visible;
+    padding: 10px;
+
 }
 
 .card {
@@ -41,7 +43,7 @@ main {
 .post {
     width: 87.58vh;
     height: auto;
-    margin-bottom: 20vh;
+    margin-bottom: 10%;
 }
 
 .post .left-part {

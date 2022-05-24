@@ -9,6 +9,10 @@ const { isAuthenticated } = require("./middleware/isAuthenticated");
 const cookieParse = require('cookie-parser')
 const cors = require('cors')
 const dotenv = require("dotenv");
+
+// import routes
+const postRoute = require('./routers/postRouter');
+// middle wares
 const PORT = 4000;
 const app = express();
 
@@ -20,26 +24,25 @@ app.use(express.static(path.resolve(__dirname, "assets")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParse())
 app.use(fileUpload());
-//Router middleware
-app.use(userRouter);
-
 app.use(cors())
 
 
+//Router middleware
+app.use(userRouter);
+app.use(postRoute)
 
 
+// app.get("/", (req, res) => {
+//   return res.render("home");
+// });
 
-app.get("/", (req, res) => {
-  return res.render("home");
-});
+// app.get("/signup", (req, res) => {
+//   return res.render("signup");
+// });
 
-app.get("/signup", (req, res) => {
-  return res.render("signup");
-});
-
-app.get("/login", isAuthenticated, (req, res) => {
-  return res.render("login");
-});
+// app.get("/login", isAuthenticated, (req, res) => {
+//   return res.render("login");
+// });
 
 
 app.use(homeRouter);

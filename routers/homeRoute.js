@@ -1,9 +1,12 @@
 const express = require("express");
-const { home, signup, login } = require("../controller/homeController");
+const { home, signup, login, post } = require("../controller/homeController");
+const { isAuthenticated } = require("../middleware/isAuthenticated");
 
 const route = express.Router();
 
-route.get("/", home);
+route.get("/", isAuthenticated, home);
+route.get("/post", isAuthenticated, post);
+
 
 route.get("/signup", signup);
 

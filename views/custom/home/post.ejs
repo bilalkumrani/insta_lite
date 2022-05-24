@@ -4,7 +4,9 @@
         <div class="header">
             <div class="left-part">
                 <img class="avatar" src="image/insta_dp.png" alt="">
-                <p class="user-name">ghulam.hussain.joyo.official</p>
+                <p class="user-name">
+                    <%= post.createdby.userName %> 
+                </p>
             </div>
             <div class="right-part"></div>
         </div>
@@ -31,40 +33,31 @@
             </div>
 
             <!-- total likes -->
-            <p class="total-likes">3 likes</p>
+            <p class="total-likes">
+                <%= post.likes.total %> 
+                likes</p>
 
             <!-- post description -->
             <div class="description">
                 <p>
-                    <span class="user-name">Ghulam Hussain</span>
-                    creative__programmer
-
-                    💖 like 📤 Share 🔖 Save
-
-                    Turn on post notification 🔔
-
-                    feel free to drop your thoughts in the comments below 🙂
-
-                    Dm for any web dev-related queries.
-
-                    Hope you find it helpful ✌️
-
-                    HASHTAGS:
-                    #coderbyte #frontenddeveloper #podcasts #javascript #javascript30 #freecodecamp #webdevelopment
-                    #developerpodcast #googlecode
-                    #codewell #cssbattle #Programming #programminglife
-                    #frontendmentor #programmingthings #programmingproblems #coding #codinglife #codingisfun
-                    #codingproblems #developerspace #supportgoodpost #creativeprogrammer #html #css #javascript</p>
+                    <span class="user-name">
+                        @<%= post.createdby.userName %> 
+                    </span>
+                    <br>
+                <%= post.description %> 
+                </p>
             </div>
             <!-- total comment -->
             <div class="total-comment">
-                <a href="#">View all 24 comments</a>
+                <a href="#">View all <%= post.comment.total %>  comments</a>
             </div>
             <!-- top two comments -->
             <div class="top-two-comments">
             </div>
             <!-- time -->
-            <p class="time">1 day ago</p>
+            <p class="time">
+                <%= post.createdAt %> 
+            </p>
         </div>
     </div>
 </div>
